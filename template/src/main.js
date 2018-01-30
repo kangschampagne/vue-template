@@ -10,8 +10,17 @@ import router from './router'
 {{#vuex}}
 import store from './store'
 {{/vuex}}
+{{#mockApi}}
+import Api from './api'
+{{/mockApi}}
 
 Vue.config.productionTip = false
+
+{{#mockApi}}
+Vue.use(Api, {
+  mock: true
+})
+{{/mockApi}}
 
 /* eslint-disable no-new */
 new Vue({

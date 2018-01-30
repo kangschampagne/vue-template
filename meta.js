@@ -138,6 +138,11 @@ module.exports = {
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
+    mockApi: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Use axios-mock-adapter mock api?'
+    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
