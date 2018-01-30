@@ -25,9 +25,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    {{#mockApi}}
+    "axios": "^0.17.0",
+    "axios-mock-adapter": "^1.10.0",
+    {{/mockApi}}
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#vuex}},
-    "vuex": "^3.0.1"{{/vuex}
+    "vuex": "^3.0.1"{{/vuex}}
   },
   "devDependencies": {
     {{#lint}}
